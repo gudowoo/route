@@ -25,3 +25,24 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Python trading example
+
+A simple trading script is available in `auto_trader.py`. It uses `yfinance` to
+retrieve market data and `alpaca_trade_api` to place orders. Set the following
+environment variables before running:
+
+```
+export ALPACA_API_KEY=<your key>
+export ALPACA_SECRET_KEY=<your secret>
+export TRADE_SYMBOL=AAPL  # or any stock symbol
+```
+
+Execute the script with:
+
+```
+python auto_trader.py
+```
+
+The example implements a basic moving average strategy and submits market orders
+through the Alpaca API.
